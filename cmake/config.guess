@@ -1326,6 +1326,9 @@ EOF
     i*86:AROS:*:*)
 	echo ${UNAME_MACHINE}-pc-aros
 	exit ;;
+    riscv64:Linux:*:*)
+	echo ${UNAME_MACHINE}-redhat-linux
+	exit ;;
 esac
 
 #echo '(No uname command or uname output not recognized.)' 1>&2

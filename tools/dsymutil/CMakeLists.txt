@@ -29,6 +29,8 @@ add_llvm_tool(dsymutil
   intrinsics_gen
   )
 
+target_link_libraries(dsymutil PRIVATE atomic)
+
 if(APPLE)
   target_link_libraries(dsymutil PRIVATE "-framework CoreFoundation")
 endif(APPLE)
